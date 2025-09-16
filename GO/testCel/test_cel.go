@@ -62,9 +62,6 @@ func Test() {
 
 	for range 1000 {
 		for _, in := range TestInputsMap {
-			if bd, ok := in["Birthdate"].(string); ok {
-				in["Birthdate"] = ConvertBirthdate(bd)
-			}
 			start := time.Now()
 			val, detail, err := prg.Eval(in)
 			elapsed := time.Since(start)

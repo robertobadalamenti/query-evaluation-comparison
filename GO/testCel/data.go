@@ -15002,3 +15002,11 @@ var TestInputsMap = []map[string]interface{}{
 		"expectedResult": false,
 	},
 }
+
+func init() {
+	for _, in := range TestInputsMap {
+		if bd, ok := in["Birthdate"].(string); ok {
+			in["Birthdate"] = ConvertBirthdate(bd)
+		}
+	}
+}
