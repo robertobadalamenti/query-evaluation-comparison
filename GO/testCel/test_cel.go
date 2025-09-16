@@ -2,13 +2,10 @@ package testCel
 
 import (
 	"fmt"
-	"strings"
 	"time"
 
 	"github.com/google/cel-go/cel"
 	"github.com/google/cel-go/common/types"
-
-	jsonlogic "github.com/diegoholiveira/jsonlogic/v3"
 )
 
 func ConvertBirthdate(dateStr string) types.Timestamp {
@@ -58,21 +55,6 @@ func init() {
 
 	ast, _ := env.Compile(expr)
 	prg, _ = env.Program(ast)
-
-	jsonlogic.AddOperator("startsWith", func(values, data any) (result any) {
-		vals, ok := values.([]any)
-		if !ok || len(vals) < 2 {
-			return false
-		}
-
-		s, ok1 := vals[0].(string)
-		prefix, ok2 := vals[1].(string)
-		if !ok1 || !ok2 {
-			return false
-		}
-
-		return strings.HasPrefix(s, prefix)
-	})
 }
 
 func Test() {

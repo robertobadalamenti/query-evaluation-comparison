@@ -3,6 +3,8 @@ package testJsonLogic
 import (
 	"testing"
 
+	_ "example.com/adEngine/jsonlogicsetup"
+
 	jsonlogic "github.com/diegoholiveira/jsonlogic/v3"
 )
 
