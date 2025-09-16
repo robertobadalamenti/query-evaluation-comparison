@@ -1,5 +1,5 @@
-import { testCel } from "./testCel";
-import { testJsonLogic } from "./testJsonLogic";
+import { testCel } from "./Cel/testCel";
+import { testJsonLogic } from "./JsonLogic/testJsonLogic";
 
 console.log("NODE");
 testCel();

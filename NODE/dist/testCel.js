@@ -26,7 +26,6 @@ const testCel = () => {
     let tot = 0;
     for (let index = 0; index < 1000; index++) {
         for (const entry of users_1.testInput) {
-            entry.Birthdate = new Date(entry.Birthdate);
             const start = performance.now();
             const res = result(entry);
             const end = performance.now();

@@ -1,7 +1,10 @@
 import jsonLogic from "json-logic-js";
-import { testInput } from "./users";
 
-const rulesJsonLogic = {
+jsonLogic.add_operation("startsWith", (a: any, b: any) => {
+  if (typeof a !== "string" || typeof b !== "string") return false;
+  return a.startsWith(b);
+});
+export const rulesJsonLogic = {
   and: [
     {
       startsWith: [
@@ -146,25 +149,4 @@ const rulesJsonLogic = {
   ],
 };
 
-jsonLogic.add_operation("startsWith", (a: any, b: any) => {
-  if (typeof a !== "string" || typeof b !== "string") return false;
-  return a.startsWith(b);
-});
-export const testJsonLogic = () => {
-  let totJson = 0;
-  for (let i = 0; i < 1000; i++) {
-    for (const entry of testInput) {
-      entry.Birthdate = new Date(entry.Birthdate) as any;
-
-      const start = performance.now();
-      const res = jsonLogic.apply(rulesJsonLogic as any, entry);
-      const end = performance.now();
-      totJson += end - start;
-      if (res !== entry.expectedResult) {
-        console.log("Incorrect evaluation ", entry);
-        break;
-      }
-    }
-  }
-  console.log(`[JsonLogic] Tempo medio: ${(totJson / 1000).toFixed(2)} ms`);
-};
+export default jsonLogic;
