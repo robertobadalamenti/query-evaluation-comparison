@@ -1,0 +1,150 @@
+{
+  "and": [
+    {
+      "startsWith": [
+        {
+          "var": "firstName"
+        },
+        "Stev"
+      ]
+    },
+    {
+      "in": [
+        {
+          "var": "lastName"
+        },
+        [
+          "Vai",
+          "Vaughan"
+        ]
+      ]
+    },
+    {
+      ">": [
+        {
+          "var": "age"
+        },
+        "28"
+      ]
+    },
+    {
+      "or": [
+        {
+          "==": [
+            {
+              "var": "isMusician"
+            },
+            true
+          ]
+        },
+        {
+          "==": [
+            {
+              "var": "instrument"
+            },
+            "guitar"
+          ]
+        }
+      ]
+    },
+    {
+      "==": [
+        {
+          "var": "groupedField1"
+        },
+        {
+          "var": "groupedField4"
+        }
+      ]
+    },
+    {
+      "<=": [
+        "1954-10-03",
+        {
+          "var": "birthdate"
+        },
+        "1960-06-06"
+      ]
+    },
+    {
+      "or": [
+        {
+          "==": [
+            {
+              "var": "groupedField2"
+            },
+            "test1"
+          ]
+        },
+        {
+          "==": [
+            {
+              "var": "instrument"
+            },
+            "clapstick"
+          ]
+        },
+        {
+          "==": [
+            {
+              "var": "height"
+            },
+            "170"
+          ]
+        },
+        {
+          "==": [
+            {
+              "var": "birthdate"
+            },
+            "2025-09-12"
+          ]
+        },
+        {
+          "and": [
+            {
+              "<=": [
+                "20",
+                {
+                  "var": "age"
+                },
+                "50"
+              ]
+            },
+            {
+              "==": [
+                {
+                  "var": "gender"
+                },
+                "O"
+              ]
+            },
+            {
+              "or": [
+                {
+                  "==": [
+                    {
+                      "var": "isMusician"
+                    },
+                    true
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "!": {
+            "<=": [
+              "22:16",
+              {
+                "var": "alarm"
+              },
+              "19:15"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
