@@ -10,7 +10,7 @@ const exprCel = `
         (
             GroupedField2 == "test1" ||
             Instrument == "clapstick" ||
-            Height == "170" ||
+            Height == 170 ||
             Birthdate == timestamp("2025-09-12T00:00:00Z") ||
             (
                 (Age >= 20 && Age <= 50) && Gender == "O" && IsMusician == true

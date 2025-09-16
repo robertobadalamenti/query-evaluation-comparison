@@ -33,7 +33,7 @@ exports.rulesJsonLogic = {
                 {
                     var: "Age",
                 },
-                "28",
+                28,
             ],
         },
         {
@@ -95,7 +95,7 @@ exports.rulesJsonLogic = {
                         {
                             var: "Height",
                         },
-                        "170",
+                        170,
                     ],
                 },
                 {
@@ -110,11 +110,11 @@ exports.rulesJsonLogic = {
                     and: [
                         {
                             "<=": [
-                                "20",
+                                20,
                                 {
                                     var: "Age",
                                 },
-                                "50",
+                                50,
                             ],
                         },
                         {

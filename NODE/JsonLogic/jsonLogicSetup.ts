@@ -27,7 +27,7 @@ export const rulesJsonLogic = {
         {
           var: "Age",
         },
-        "28",
+        28,
       ],
     },
     {
@@ -89,7 +89,7 @@ export const rulesJsonLogic = {
             {
               var: "Height",
             },
-            "170",
+            170,
           ],
         },
         {
@@ -104,11 +104,11 @@ export const rulesJsonLogic = {
           and: [
             {
               "<=": [
-                "20",
+                20,
                 {
                   var: "Age",
                 },
-                "50",
+                50,
               ],
             },
             {
