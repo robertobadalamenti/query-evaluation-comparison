@@ -1,4 +1,13 @@
+1000 utenti
+
 | Piattaforma    | CEL Tempo medio       | JsonLogic Tempo medio       |
 | -------------- | --------------------- |---------------------------- |
 | **GO**         | 462.053 µs            | 1344.954 µs                 |
 | **NODE**       | 520.24 µs             | 913.70 µs                   | 
+
+10000 utenti
+
+| Piattaforma    | CEL Tempo medio       | JsonLogic Tempo medio       |
+| -------------- | --------------------- |---------------------------- |
+| **GO**         | 481.939 µs            | 13103.806 µs                |
+| **NODE**       | 5440 µs               | 9640 µs                     | 
